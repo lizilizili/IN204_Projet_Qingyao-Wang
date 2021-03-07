@@ -11,19 +11,19 @@ AR = ar
 LD = g++
 WINDRES = windres
 
-INC = -ID:../SFML-2.5.1/include
+INC = -I../SFML-2.5.1/include
 CFLAGS = -Wall
 RESINC = 
-LIBDIR = -LD:../SFML-2.5.1/lib
+LIBDIR = -L../SFML-2.5.1/lib
 LIB = -lmingw32 -luser32 -lgdi32 -lwinmm -ldxguid
 LDFLAGS = 
 
-INC_DEBUG = $(INC)
-CFLAGS_DEBUG = $(CFLAGS) -g
+INC_DEBUG = $(INC) -I../SFML-2.5.1/include
+CFLAGS_DEBUG = $(CFLAGS) -g -DSFML_STATIC
 RESINC_DEBUG = $(RESINC)
 RCFLAGS_DEBUG = $(RCFLAGS)
-LIBDIR_DEBUG = $(LIBDIR)
-LIB_DEBUG = $(LIB)-lsfml-graphics-d -lsfml-window-d -lsfml-system-d
+LIBDIR_DEBUG = $(LIBDIR) -L../SFML-2.5.1/lib
+LIB_DEBUG = $(LIB)-lsfml-graphics -lsfml-window -lsfml-system
 LDFLAGS_DEBUG = $(LDFLAGS)
 OBJDIR_DEBUG = obj/Debug
 DEP_DEBUG = 

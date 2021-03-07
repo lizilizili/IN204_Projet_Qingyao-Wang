@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="6" />
 	<Project>
 		<Option title="in204_p" />
+		<Option makefile="makefile" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -13,11 +14,14 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-DSFML_STATIC" />
+					<Add directory="../SFML-2.5.1/include" />
 				</Compiler>
 				<Linker>
-					<Add library="sfml-graphics-d" />
-					<Add library="sfml-window-d" />
-					<Add library="sfml-system-d" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
+					<Add directory="../SFML-2.5.1/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,7 +42,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="D:/Codes/SFML-2.5.1/include" />
+			<Add directory="../SFML-2.5.1/include" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
@@ -46,7 +50,7 @@
 			<Add library="gdi32" />
 			<Add library="winmm" />
 			<Add library="dxguid" />
-			<Add directory="D:/Codes/SFML-2.5.1/lib" />
+			<Add directory="../SFML-2.5.1/lib" />
 		</Linker>
 		<Unit filename="brick.h" />
 		<Unit filename="cb.bmp" />
