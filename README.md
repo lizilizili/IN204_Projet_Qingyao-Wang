@@ -3,8 +3,8 @@
 ### Author: Qingyao Wang
 ## Exécution
 C'est un projet de CodeBlocks.
-Ouvriez directement le fichier ```./TETRIS/in204_p.cbp``` dans CodeBlocks
-un makefile est aussi fourni par cbp2make
+Ouvriez directement le fichier ```./TETRIS/in204_p.cbp``` dans CodeBlocks.
+Un makefile est aussi fourni par cbp2make
 
 ## Classes
 ### Classe Brick
